@@ -1,0 +1,87 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 24,
+    "spacing": 5,
+
+    "modules-left": ["hyprland/workspaces", "memory", "temperature"],
+    "modules-center": ["clock"],
+    "modules-right": ["wireplumber", "battery", "battery#bat2", "backlight", "hyprland/language", "tray"],
+
+    "hyprland/workspaces": {
+        "format": "<span size='larger'>{icon}</span>",
+        "on-click": "activate",
+        "format-icons": {
+            "active": "\uf444",
+            "default": "\uf4c3"
+        },
+        "icon-size": 10,
+        "sort-by-number": true,
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+        }
+    },
+
+    "clock": {
+        "format": "{:%d.%m.%Y | %H:%M:%S}",
+	"interval": 1
+	},
+
+    "wireplumber": {
+        "format": "\udb81\udd7e  {volume}%",
+        "max-volume": 100,
+        "scroll-step": 5
+    },
+
+    "battery": {
+  "bat": "BAT0",
+  "interval": 60,
+  "format": "{icon} {capacity}%",
+  "format-icons": ["","","","",""],
+  "colors": {
+    "Charging": "#00FF00",
+    "Discharging": "#FFFFFF",
+    "Full": "#00FF00"
+    }
+},
+
+"battery#bat2": {
+  "bat": "BAT1",
+  "interval": 60,
+  "format": "{icon} {capacity}%",
+  "format-icons": ["","","","",""],
+  "colors": {
+    "Charging": "#00FF00",
+    "Discharging": "#FFFFFF",
+    "Full": "#00FF00"
+  }
+},
+    "backlight": {
+        "format": "\udb80\udcdf  {percent}%"
+    },
+
+    "memory": {
+        "interval": 30,
+        "format": "\uf4bc  {used:0.1f}G"
+    },
+
+    "temperature": {
+        "format": "  {temperatureC}°C"
+    },
+
+
+
+    "hyprland/language": {
+        "format": "{short}"
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 16,
+	"disable-transparency": true
+    }
+}
